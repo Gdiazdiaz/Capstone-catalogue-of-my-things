@@ -7,15 +7,23 @@ class App
     puts 'pending feature'
   end
 
+  def movie_list
+    puts 'pending feature'
+  end
+
   def genre_list
     puts 'pending feature'
   end
 
-  def lable_list
+  def label_list
     puts 'pending feature'
   end
 
   def author_list
+    puts 'pending feature'
+  end
+
+  def source_list
     puts 'pending feature'
   end
 
@@ -24,6 +32,10 @@ class App
   end
 
   def add_album
+    puts 'pending feature'
+  end
+
+  def add_movie
     puts 'pending feature'
   end
 
