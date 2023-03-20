@@ -2,7 +2,7 @@ require_relative '../modules/book'
 
 describe Book do
   before :each do
-    @book = Book.new(id: 01, publisher: 'Macaw Co', cover_state: 'bad', publish_date: '12/12/2023', archived: false)
+    @book = Book.new(id: 0o1, publisher: 'Macaw Co', cover_state: 'bad', publish_date: '12/12/2023', archived: false)
   end
 
   describe '#new' do
@@ -11,7 +11,7 @@ describe Book do
     end
 
     it 'returns true for' do
-        expect(@book.can_be_archived?).to be true
+      expect(@book.can_be_archived?).to be true
     end
   end
 end

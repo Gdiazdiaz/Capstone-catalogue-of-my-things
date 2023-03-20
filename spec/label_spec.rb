@@ -3,8 +3,8 @@ require_relative '../item'
 
 describe Label do
   before :each do
-    @label = Label.new(id: 01, title: 'Test Title', color: 'Test color')
-    @item = Item.new(id: 01, archived: true, publish_date: '12/12/2023')
+    @label = Label.new(id: 0o1, title: 'Test Title', color: 'Test color')
+    @item = Item.new(id: 0o1, archived: true, publish_date: '12/12/2023')
   end
 
   describe '#new' do
@@ -13,9 +13,9 @@ describe Label do
     end
 
     it 'add new item' do
-        @label.add_item(@item)
-        expect(@label.items).to include(@item)
-        expect(@item.label).to eq @label
+      @label.add_item(@item)
+      expect(@label.items).to include(@item)
+      expect(@item.label).to eq @label
     end
   end
 end
