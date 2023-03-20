@@ -15,7 +15,7 @@ class App
     puts 'pending feature'
   end
 
-  def lable_list
+  def label_list
     puts 'pending feature'
   end
 

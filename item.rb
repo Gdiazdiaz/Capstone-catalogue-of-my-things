@@ -5,7 +5,7 @@ class Item
     @publish_date = publish_date
   end
 
-  attr_accessor :genre, :author, :lable, :source
+  attr_accessor :genre, :author, :label, :source
 
   def can_be_archived?
     return true if Date.strptime(publish_date, '%d/%m/%Y') < Date.today - 3652
