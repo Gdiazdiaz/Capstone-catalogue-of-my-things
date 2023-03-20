@@ -1,8 +1,4 @@
 class App
-  def initialize()
-
-  end
-
   def book_list
     puts 'pending feature'
   end
@@ -39,5 +35,4 @@ class App
     puts 'Thank you for using our services'
     abort
   end
-
 end

@@ -1,5 +1,5 @@
 require_relative './modules-for-main/app'
-require_relative './modules-for-main/entry-point'
+require_relative './modules-for-main/entry_point'
 require_relative './modules-for-main/options'
 
 class MainController
@@ -14,7 +14,6 @@ class MainController
     @app.send(@options.display)
     execute
   end
-
 end
 
 main = MainController.new
