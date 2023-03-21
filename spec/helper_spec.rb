@@ -1,2 +1,2 @@
-require_relative '..lib/music/genre'
-require_relative '..lib/music/music_album'
+require_relative '../lib/music/genre'
+require_relative '../lib/music/music_album'
