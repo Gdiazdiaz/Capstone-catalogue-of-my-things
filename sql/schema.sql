@@ -12,3 +12,17 @@ CREATE TABLE music_albums (
   on_spotify BOOLEAN,
   CONSTRAINT fk_genres FOREIGN KEY(genre_id) REFERENCES genres(id)
 );
+
+-- books table
+CREATE TABLE books(
+   publisher text,
+   cover_state text
+);
+
+-- labels table
+CREATE TABLE labels(
+   id SERIAL PRIMARY KEY,
+   title text,
+   color text,
+   item_id int REFERENCES item (id)
+);
