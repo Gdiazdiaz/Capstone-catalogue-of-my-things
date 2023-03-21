@@ -4,7 +4,7 @@ class MusicAlbum < MusicItem
   attr_accessor :on_spotify
 
   def initialize(publish_year, on_spotify: false)
-    super(publish_date, is_archived: false)
+    super(publish_year, is_archived: false)
     @on_spotify = on_spotify
   end
 
