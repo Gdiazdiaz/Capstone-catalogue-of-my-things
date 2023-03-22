@@ -1,8 +1,11 @@
-class Author
-  attr_accessor :id, :first_name, :last_name, :items
+require 'securerandom'
 
-  def initialize(id, first_name, last_name)
-    @id = id
+class Author
+  attr_accessor :first_name, :last_name, :items
+  attr_reader :id
+
+  def initialize(first_name, last_name)
+    @id = SecureRandom.uuid
     @first_name = first_name
     @last_name = last_name
     @items = []
