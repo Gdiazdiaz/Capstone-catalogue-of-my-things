@@ -9,7 +9,6 @@ class Item
   end
 
   attr_accessor :genre, :author, :label, :source
-  attr_reader :id, :publish_date, :archived
 
   def move_to_archive
     return unless can_be_archived?
@@ -27,7 +26,7 @@ class Item
   private
 
   def can_be_archived?
-    return true if Date.strptime(publish_date, '%d/%m/%Y') < Date.today - 3652
+    return true if Date.strptime(@publish_date, '%d/%m/%Y') < Date.today - 3652
 
     false
   end
