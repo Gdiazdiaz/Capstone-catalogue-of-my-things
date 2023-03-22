@@ -20,7 +20,7 @@ RSpec.describe Movie do
         expect(subject.send(:can_be_archived?)).to be false
       end
     end
-    
+
     context 'when the movie is MORE than 10 years old and is NOT silent' do
       subject { described_class.new(publish_date: '1997-01-17', silent: false) }
 
