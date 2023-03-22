@@ -1,4 +1,5 @@
 require 'securerandom'
+require 'date'
 
 class Item
   attr_reader :id
@@ -13,9 +14,7 @@ class Item
   attr_accessor :genre, :author, :label, :source, :publish_date, :archived
 
   def move_to_archive
-    return unless can_be_archived?
-
-    @archived = true
+    @archived = true if can_be_archived?
   end
 
   def add_source(source)
@@ -28,8 +27,6 @@ class Item
   private
 
   def can_be_archived?
-    return true if Date.strptime(@publish_date, '%d/%m/%Y') < Date.today - 3652
-
-    false
+    (Date.today - Date.parse(@publish_date)).to_i / 365 > 10
   end
 end
