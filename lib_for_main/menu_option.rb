@@ -13,12 +13,12 @@ module MenuOption
       list_labels
     when 6
       lis_all_authors
-    when 7
-      add_book
-    when 8
-      add_music_album
-    when 9
-      add_game
+    # when 7
+    #   add_book
+    # when 8
+    #   add_music_album
+    # when 9
+    #   add_game
     else
       puts 'Select a valid option'
       run
