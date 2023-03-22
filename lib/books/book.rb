@@ -6,6 +6,8 @@ class Book < Item
     @cover_state = cover_state
   end
 
+  attr_accessor :id, :publisher, :cover_state, :publish_date, :archived
+
   def can_be_archived?
     @cover_state == 'bad'
   end
