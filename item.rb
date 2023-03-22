@@ -2,16 +2,23 @@ require 'securerandom'
 require 'date'
 
 class Item
-  attr_reader :id
+  attr_accessor :publish_date, :archived
+  attr_reader :id, :genre, :author, :label
 
-  def initialize(publish_date:)
-    @id = SecureRandom.hex(10)
+  def initialize(publish_date = Date.today, id = SecureRandom.hex(10), archived: false)
+    @id = id
     @publish_date = publish_date
     @archived = archived
-    @source = nil
   end
+
+  # def initialize(publish_date:)
+  #   @id = SecureRandom.hex(10)
+  #   @publish_date = publish_date
+  #   @archived = archived
+  #   @source = nil
+  # end
   
-  attr_accessor :genre, :author, :label, :source, :publish_date, :archived
+  # attr_accessor :genre, :author, :label, :source, :publish_date, :archived
 
   def move_to_archive
     @archived = true if can_be_archived?
