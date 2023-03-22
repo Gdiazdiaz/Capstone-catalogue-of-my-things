@@ -6,7 +6,7 @@ require 'date'
 describe Author do
   before(:each) do
     @author = Author.new('Birhanu', 'Gudisa')
-    @item = Item.new(id: SecureRandom.uuid, archived: true, publish_date: Date.today)
+    @item = Item.new(publish_date: Date.today)
   end
 
   it 'it is an instance of Author class' do
