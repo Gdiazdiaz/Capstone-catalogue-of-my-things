@@ -17,7 +17,7 @@ class Item
   #   @archived = archived
   #   @source = nil
   # end
-  
+
   # attr_accessor :genre, :author, :label, :source, :publish_date, :archived
 
   def move_to_archive
