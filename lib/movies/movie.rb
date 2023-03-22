@@ -10,6 +10,6 @@ class Movie < Item
   private
 
   def can_be_archived?
-    super or @silent == true
+    super or @silent
   end
 end
