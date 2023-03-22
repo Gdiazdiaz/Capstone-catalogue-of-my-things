@@ -7,7 +7,6 @@ require 'json'
 # require 'uuid'
 
 class App
-  include AppModule
   def initialize
     books_data = HandleData.new('book')
     @books = books_data.read.map do |book|
