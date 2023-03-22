@@ -1,14 +1,14 @@
 class PreserveMusicGenre
   def self.albums(album)
-    # genre = {
-    #   id: album.genre.id,
-    #   name: album.genre.name
-    # }
+    genre = {
+      id: album.genre.id,
+      name: album.genre.name
+    }
 
-    # label = {
-    #   id: album.label.id,
-    #   title: album.label.title
-    # }
+    label = {
+      id: album.label.id,
+      title: album.label.title
+    }
 
     author = {
       id: album.author.id,
@@ -19,10 +19,10 @@ class PreserveMusicGenre
     music_album = {
       id: album.id,
       on_spotify: album.on_spotify,
-      publish_date: album.publish_year,
-      is_archived: album.is_archived,
-      # label: label,
-      # genre: genre,
+      publish_year: album.publish_year,
+      archived: album.archived,
+      label: label,
+      genre: genre,
       author: author
     }
 
