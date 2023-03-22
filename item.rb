@@ -14,9 +14,7 @@ class Item
   attr_accessor :genre, :author, :label, :source, :publish_date, :archived
 
   def move_to_archive
-    return unless can_be_archived?
-
-    @archived = true
+    @archived = true if can_be_archived?
   end
 
   def add_source(source)
