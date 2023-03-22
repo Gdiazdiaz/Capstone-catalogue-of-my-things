@@ -4,6 +4,8 @@ class Movie < Item
     @silent = silent
   end
 
+  private
+
   def can_be_archived?
     return true if super && @silent == true
 

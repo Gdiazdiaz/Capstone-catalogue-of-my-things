@@ -11,12 +11,6 @@ class Item
   attr_accessor :genre, :author, :label, :source
   attr_reader :id, :publish_date, :archived
 
-  def can_be_archived?
-    return true if Date.strptime(publish_date, '%d/%m/%Y') < Date.today - 3652
-
-    false
-  end
-
   def move_to_archive
     return unless can_be_archived?
 
@@ -28,5 +22,13 @@ class Item
     return if source.nil?
 
     source.items.push(self) unless source.items.include?(self)
+  end
+
+  private
+
+  def can_be_archived?
+    return true if Date.strptime(publish_date, '%d/%m/%Y') < Date.today - 3652
+
+    false
   end
 end

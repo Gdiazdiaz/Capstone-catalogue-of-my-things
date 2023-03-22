@@ -1,6 +1,8 @@
+require 'securerandom'
+
 class Label
-  def initialize(id:, title:, color:)
-    @id = id
+  def initialize(title:, color:)
+    @id = SecureRandom.hex(10)
     @title = title
     @color = color
     @items = []
