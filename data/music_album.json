@@ -1,0 +1,21 @@
+[
+  {
+    "id": "4bf42640-732d-4e80-9477-238f4f855780",
+    "on_spotify": true,
+    "publish_year": 2023,
+    "is_archived": false,
+    "label": {
+      "id": "d0d2f51c-eeb1-4502-ba06-b17674c1c485",
+      "title": "music of the year"
+    },
+    "genre": {
+      "id": "17d503d0-ce43-460d-942a-4476beb83ec2",
+      "name": "genre"
+    },
+    "author": {
+      "id": 222,
+      "first_name": "Musician",
+      "last_name": "Musician's Last Name"
+    }
+  }
+]
