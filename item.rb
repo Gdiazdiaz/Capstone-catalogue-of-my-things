@@ -9,7 +9,7 @@ class Item
   end
 
   attr_accessor :genre, :author, :label, :source
-  attr_reader :id, :publish_date, :archived 
+  attr_reader :id, :publish_date, :archived
 
   def can_be_archived?
     return true if Date.strptime(publish_date, '%d/%m/%Y') < Date.today - 3652
