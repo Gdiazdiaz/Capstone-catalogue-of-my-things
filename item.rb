@@ -1,4 +1,5 @@
 require 'securerandom'
+require 'date'
 
 class Item
   def initialize(publish_date:)
@@ -27,8 +28,6 @@ class Item
   private
 
   def can_be_archived?
-    return true if Date.strptime(@publish_date, '%d/%m/%Y') < Date.today - 3652
-
-    false
+    (Date.today - Date.parse(@publish_date)).to_i / 365 > 10
   end
 end
