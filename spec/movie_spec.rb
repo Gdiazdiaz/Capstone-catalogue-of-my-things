@@ -13,7 +13,7 @@ RSpec.describe Movie do
   end
 
   describe '#can_be_archived?' do
-    context 'when the movie is less than 10 years old and is NOT silent' do
+    context 'when the movie is LESS than 10 years old and is NOT silent' do
       subject { described_class.new(publish_date: Date.today.to_s, silent: false) }
 
       it 'returns false' do
@@ -21,8 +21,24 @@ RSpec.describe Movie do
       end
     end
     
-    context 'when the movie is more than 10 years old and is NOT silent' do
+    context 'when the movie is MORE than 10 years old and is NOT silent' do
       subject { described_class.new(publish_date: '1997-01-17', silent: false) }
+
+      it 'returns true' do
+        expect(subject.send(:can_be_archived?)).to be true
+      end
+    end
+
+    context 'when the movie is LESS than 10 years old and IS silent' do
+      subject { described_class.new(publish_date: Date.today.to_s, silent: true) }
+
+      it 'returns true' do
+        expect(subject.send(:can_be_archived?)).to be true
+      end
+    end
+
+    context 'when the movie is MORE than 10 years old and IS silent' do
+      subject { described_class.new(publish_date: Date.today.to_s, silent: true) }
 
       it 'returns true' do
         expect(subject.send(:can_be_archived?)).to be true
