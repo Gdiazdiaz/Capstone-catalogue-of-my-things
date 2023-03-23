@@ -1,22 +1,26 @@
-require_relative '../data/preserve_data'
 require_relative '../lib/books/book'
 require_relative '../lib/books/label'
+require_relative '../lib/author'
 require_relative '../lib/handle_data'
 require_relative '../lib/game'
 require 'json'
 require_relative '../lib/modules/add_book'
+require_relative '../lib/modules/book_list'
+require_relative '../lib/modules/label_list'
 
 class App
   include AddBook
+  include BookList
+  include LabelList
 
   def initialize
     books_data = HandleData.new('book')
     @books = books_data.read.map do |book|
-      Book.new(
-        publisher: book['publisher'],
-        cover_state: book['cover_state'],
-        publish_date: book['publsh_date']
-      )
+      book
+    end
+    labels_data = HandleData.new('label')
+    @labels = labels_data.read.map do |label|
+      label
     end
 
     games_data = HandleData.new('game')
@@ -29,14 +33,11 @@ class App
     end
   end
 
-  def book_list
-    puts @books
-  end
-
   def game_list
     if @games.empty?
       puts 'No game, try to add new one'
     else
+      puts 'Books on our list:'
       @games.map do |game|
         puts "#{game.publish_date}, #{game.last_played_at}"
       end
@@ -49,10 +50,6 @@ class App
 
   def genre_list
     puts @genres
-  end
-
-  def label_list
-    puts @labels
   end
 
   def author_list
@@ -100,16 +97,15 @@ class App
 
     book_json = []
     @books.map do |book|
-      book_json.push({
-                       id: book.id,
-                       publish_date: book.publish_date,
-                       archived: book.archived,
-                       source: book.source,
-                       publisher: book.publisher,
-                       cover_state: book.cover_state
-                     })
+      book_json.push(book)
     end
     HandleData.new('book').write(book_json)
+
+    label_json = []
+    @labels.map do |label|
+      label_json.push(label)
+    end
+    HandleData.new('label').write(label_json)
     puts 'Thank you for using our services'
     abort
   end
