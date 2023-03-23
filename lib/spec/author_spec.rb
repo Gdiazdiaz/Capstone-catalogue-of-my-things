@@ -1,11 +1,11 @@
-require_relative '../lib/author'
+require_relative '../author'
 require_relative '../item'
 require 'securerandom'
 require 'date'
 
 describe Author do
   before(:each) do
-    @author = Author.new('Birhanu', 'Gudisa')
+    @author = Author.new(first_name: 'Birhanu', last_name: 'Gudisa')
     @item = Item.new(publish_date: Date.today)
   end
 

@@ -1,4 +1,4 @@
-require_relative '../lib/books/book'
+require_relative '../book'
 
 describe Book do
   before :each do

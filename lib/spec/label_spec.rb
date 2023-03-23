@@ -1,4 +1,4 @@
-require_relative '../lib/books/label'
+require_relative '../label'
 require_relative '../item'
 
 describe Label do
@@ -10,7 +10,6 @@ describe Label do
   describe '#new' do
     it 'returns a new object' do
       expect(@label).to be_instance_of(Label)
-      # @label.should be_an_instance_of Label
     end
 
     it 'add new item' do

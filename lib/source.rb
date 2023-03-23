@@ -1,13 +1,14 @@
 require 'securerandom'
 
 class Source
-  def initialize(name)
+  attr_accessor :name
+  attr_reader :id, :items
+
+  def initialize(name:)
     @id = SecureRandom.hex(10)
     @name = name
     @items = []
   end
-
-  attr_reader :id, :name, :items
 
   def add_item(item)
     item.source = self

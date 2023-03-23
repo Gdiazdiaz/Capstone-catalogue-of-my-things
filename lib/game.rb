@@ -1,11 +1,12 @@
-require_relative '../item'
+require_relative './item'
+require_relative './author'
 require 'date'
 require 'securerandom'
 
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(publish_date, multiplayer, last_played_at = Date.today)
+  def initialize(publish_date:, multiplayer:, last_played_at: Date.today)
     super(publish_date: publish_date)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
