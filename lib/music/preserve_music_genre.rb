@@ -1,14 +1,14 @@
 class PreserveMusicGenre
   def self.albums(album)
-    # genre = {
-    #   id: album.genre.id,
-    #   name: album.genre.name
-    # }
+    genre = {
+      id: album.genre.id,
+      name: album.genre.name
+    }
 
-    # label = {
-    #   id: album.label.id,
-    #   title: album.label.title
-    # }
+    label = {
+      id: album.label.id,
+      title: album.label.title
+    }
 
     author = {
       id: album.author.id,
@@ -19,14 +19,14 @@ class PreserveMusicGenre
     music_album = {
       id: album.id,
       on_spotify: album.on_spotify,
-      publish_date: album.publish_year,
-      is_archived: album.is_archived,
-      # label: label,
-      # genre: genre,
+      publish_date: album.publish_date,
+      is_archived: album.archived,
+      label: label,
+      genre: genre,
       author: author
     }
 
-    file = '../../data/music_album.json'
+    file = './music_album.json'
     File.write(file, '[]') unless File.exist?(file)
     albums_data = File.read(file)
     @music_albums = JSON.parse(albums_data)
@@ -34,13 +34,13 @@ class PreserveMusicGenre
     File.write(file, JSON.pretty_generate(@music_albums))
   end
 
-  def self.genre(genre)
+  def self.genres(genre)
     nmusic_genre = {
       id: genre.id,
       name: genre.name
     }
 
-    file = '../../data/genre.json'
+    file = './genre.json'
     File.write(file, '[]') unless File.exist?(file)
     genres_data = File.read(file)
     @genres = JSON.parse(genres_data)
