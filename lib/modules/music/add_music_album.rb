@@ -1,7 +1,4 @@
 require_relative '../../music/preserve_music_genre'
-# require_relative '../../music/music_album'
-# require_relative '../../author'
-# require_relative '../../music/genre'
 
 module AddMusicAlbum
   def add_music_album

@@ -1,4 +1,4 @@
-require_relative '../../music/preserve_music_genre.rb'
+require_relative '../../music/preserve_music_genre'
 module AddGame
   def add_game
     before_add_game
@@ -43,8 +43,9 @@ module AddGame
     puts '============================================================'
     puts 'Press any key to go back to the main menu'
     gets.chomp
-
-    def before_add_game
-      puts 'Hello user Wellcome, please add a music album'
-    end
   end
+
+  def before_add_game
+    puts 'Hello user Wellcome, please add a music album'
+  end
+end
