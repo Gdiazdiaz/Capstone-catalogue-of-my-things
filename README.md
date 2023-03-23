@@ -55,6 +55,9 @@
 
 To get a local copy up and running, follow these steps.
 
+## Diagram
+<img src="./images/catalog_of_my_things.png" alt="project database" width="650">
+
 ### Prerequisites
 
 In order to run this project you need:
