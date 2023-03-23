@@ -1,3 +1,5 @@
+require 'json'
+
 class PreserveMusicGenre
   def self.albums(album)
     genre = {
@@ -26,8 +28,13 @@ class PreserveMusicGenre
       author: author
     }
 
-    file = './music_album.json'
-    File.write(file, '[]') unless File.exist?(file)
+    file = './data/music_album.json'
+    unless File.exist?(file)
+      File.new('./data/music_album.json', 'w')
+      File.write('./data/music_album.json', [])
+      return []
+    end
+    # File.write(file, '[]') unless File.exist?(file)
     albums_data = File.read(file)
     @music_albums = JSON.parse(albums_data)
     @music_albums << music_album
@@ -40,7 +47,7 @@ class PreserveMusicGenre
       name: genre.name
     }
 
-    file = './genre.json'
+    file = './data/genre.json'
     File.write(file, '[]') unless File.exist?(file)
     genres_data = File.read(file)
     @genres = JSON.parse(genres_data)
