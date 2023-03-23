@@ -4,7 +4,7 @@ require 'date'
 
 RSpec.describe Movie do
   describe '#initialize' do
-    subject { described_class.new('1997-01-22',true) }
+    subject { described_class.new('1997-01-22', true) }
 
     it 'creates a new movie with publish date and silent vars' do
       expect(subject).to be_instance_of(described_class)
@@ -15,7 +15,7 @@ RSpec.describe Movie do
 
   describe '#can_be_archived?' do
     context 'when the movie is LESS than 10 years old and is NOT silent' do
-      subject { described_class.new( Date.today.to_s, false) }
+      subject { described_class.new(Date.today.to_s, false) }
 
       it 'returns false' do
         expect(subject.send(:can_be_archived?)).to be false
@@ -31,7 +31,7 @@ RSpec.describe Movie do
     end
 
     context 'when the movie is LESS than 10 years old and IS silent' do
-      subject { described_class.new( Date.today.to_s, true) }
+      subject { described_class.new(Date.today.to_s, true) }
 
       it 'returns true' do
         expect(subject.send(:can_be_archived?)).to be true
@@ -39,7 +39,7 @@ RSpec.describe Movie do
     end
 
     context 'when the movie is MORE than 10 years old and IS silent' do
-      subject { described_class.new( Date.today.to_s, true) }
+      subject { described_class.new(Date.today.to_s, true) }
 
       it 'returns true' do
         expect(subject.send(:can_be_archived?)).to be true
