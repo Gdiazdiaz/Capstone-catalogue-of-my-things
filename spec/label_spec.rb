@@ -3,8 +3,8 @@ require_relative '../item'
 
 describe Label do
   before :each do
-    @label = Label.new(title: 'Test Title', color: 'Test color')
-    @item = Item.new(publish_date: '12/12/2023')
+    @label = Label.new('Test Title', 'Test color')
+    @item = Item.new('2023-12-12')
   end
 
   describe '#new' do

@@ -15,8 +15,8 @@ RSpec.describe Source do
   end
 
   describe '#add_item' do
-    let(:movie) { Movie.new(publish_date: '1997-01-22', silent: true) }
-    let(:item) { Item.new(publish_date: '1997-01-22') }
+    let(:movie) { Movie.new('1997-01-22', true) }
+    let(:item) { Item.new( '1997-01-22') }
 
     it 'adds Item to @items array and sets @source of Item' do
       expect(subject.add_item(item)).to include(item)
