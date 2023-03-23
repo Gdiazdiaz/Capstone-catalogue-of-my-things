@@ -7,10 +7,10 @@ class Source
     @items = []
   end
 
-  attr_reader :id, :name, :items
+  attr_reader :id, :name, :items, :source
 
   def add_item(item)
-    item.source = self
     @items.push(item)
+    item.source = self
   end
 end
