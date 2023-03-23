@@ -1,6 +1,6 @@
 class Load
   def self.genre
-    file = '../../data/genre.json'
+    file = './genre.json'
     data = []
     if File.exist?(file)
       JSON.parse(File.read(file)).each do |genre|
@@ -12,7 +12,7 @@ class Load
   end
 
   def self.albums
-    file = '../../data/music_album.json'
+    file = './music_album.json'
     data = []
     if File.exist?(file)
       JSON.parse(File.read(file)).each do |albums|
