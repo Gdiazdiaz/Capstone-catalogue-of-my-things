@@ -19,14 +19,14 @@ module AddBook
     book = Book.new(publish_date: p_date, publisher: publisher, cover_state: c_state)
     author = Author.new(author_f, author_l)
     book_obj = {
-      id: book.id, title: label.title, publish_date: book.publish_date,
-      publisher: book.publisher, cover_state: book.cover_state,
-      archived: book.archived, author_f: author.first_name, author_l: author.last_name
+      'id' => book.id, 'title' => label.title, 'publish_date' => book.publish_date,
+      'publisher' => book.publisher, 'cover_state' => book.cover_state,
+      'archived' => book.archived, 'author_f' => author.first_name, 'author_l' => author.last_name
     }
     label_obj = {
-      id: label.id,
-      title: label.title,
-      color: label.color
+      'id' => label.id,
+      'title' => label.title,
+      'color' => label.color
     }
     @books.push(book_obj)
     @labels.push(label_obj)
