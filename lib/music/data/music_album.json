@@ -17,24 +17,5 @@
       "first_name": "Musician",
       "last_name": "Musician's Last Name"
     }
-  },
-  {
-    "id": "227cc8b23b759a0e9337",
-    "on_spotify": true,
-    "publish_date": 2023,
-    "is_archived": false,
-    "label": {
-      "id": "498377e4f1c888a2337f",
-      "title": "aff"
-    },
-    "genre": {
-      "id": "2a5b6d8a-ae65-4463-960c-d0b6fe7ea890",
-      "name": "dkfdf"
-    },
-    "author": {
-      "id": "62c846f4-8b99-4695-bb36-e2aa99909617",
-      "first_name": "afaf",
-      "last_name": "afjf"
-    }
   }
 ]

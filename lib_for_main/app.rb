@@ -7,13 +7,24 @@ require 'json'
 require_relative '../lib/modules/add_book'
 require_relative '../lib/modules/book_list'
 require_relative '../lib/modules/label_list'
+require_relative '../lib/modules/music/add_music_album'
+require_relative '../lib/modules/music/list_genre'
+require_relative '../lib/modules/music/list_music_album'
+require_relative '../lib/music/load_music'
+require_relative '../lib/music/music_album'
+require_relative '../lib/music/genre'
 
 class App
   include AddBook
   include BookList
   include LabelList
+  include AddMusicAlbum
+  include ListGenre
+  include ListMusicAlbums
 
   def initialize
+    @genres = Load.genre
+    @music_albums = Load.albums
     books_data = HandleData.new('book')
     @books = books_data.read.map do |book|
       book
@@ -49,7 +60,7 @@ class App
   end
 
   def genre_list
-    puts @genres
+    list_genres
   end
 
   def author_list
@@ -60,8 +71,12 @@ class App
     puts @sources
   end
 
+  def list_music_album
+    list_music_albums
+  end
+
   def add_album
-    puts 'pending feature'
+    add_music_album
   end
 
   def add_movie

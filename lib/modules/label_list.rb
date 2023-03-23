@@ -5,7 +5,7 @@ module LabelList
     else
       puts 'Labels on our list:'
       @labels.map do |label|
-        puts "Title: #{label['title']}, Color: #{label['color']}"
+        puts "Title: #{label['title']}, Color: #{label['color']} \n"
       end
     end
   end

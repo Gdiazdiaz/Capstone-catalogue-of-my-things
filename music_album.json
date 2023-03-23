@@ -1,0 +1,97 @@
+[
+  {
+    "id": "783eeb520014ea2f766e",
+    "on_spotify": true,
+    "publish_date": 2023,
+    "is_archived": false,
+    "label": {
+      "id": "508788125c382d25dee1",
+      "title": "jahfa"
+    },
+    "genre": {
+      "id": "5205b5b7-9e9f-43a0-85a2-e176a6d3e297",
+      "name": "jaaha"
+    },
+    "author": {
+      "id": "45677318-6152-4941-8bea-2f6a123a0ab8",
+      "first_name": "haha",
+      "last_name": "hahfa"
+    }
+  },
+  {
+    "id": "41a0ebbcb8a699d81022",
+    "on_spotify": true,
+    "publish_date": 2023,
+    "is_archived": false,
+    "label": {
+      "id": "baccf0d1b4320a4350fe",
+      "title": "ahfha"
+    },
+    "genre": {
+      "id": "5b7e64b6-9a13-47cf-876d-6febba222612",
+      "name": "jfha"
+    },
+    "author": {
+      "id": "b2dd57e9-e16f-418f-8ed5-adfcf70de1ec",
+      "first_name": "ahfa",
+      "last_name": "haa"
+    }
+  },
+  {
+    "id": "72715dc70862f70d89ec",
+    "on_spotify": true,
+    "publish_date": 2023,
+    "is_archived": false,
+    "label": {
+      "id": "cddff7bff072fa862ca4",
+      "title": "afaf"
+    },
+    "genre": {
+      "id": "1a2e0c17-538d-49e4-8bad-b54fb289938a",
+      "name": "nafa"
+    },
+    "author": {
+      "id": "06d7c348-0bd7-4131-b74d-80703fabf8a0",
+      "first_name": "afafa",
+      "last_name": "afaaf"
+    }
+  },
+  {
+    "id": "c7bc8f2fef93864b674e",
+    "on_spotify": true,
+    "publish_date": 2023,
+    "is_archived": false,
+    "label": {
+      "id": "b9f864d614b8492e29d6",
+      "title": "afadf"
+    },
+    "genre": {
+      "id": "6057d022-ccd2-43fe-b707-2b0378d11ed6",
+      "name": "afa"
+    },
+    "author": {
+      "id": "e2288e13-29e0-49d1-979a-ef0dc7803f2f",
+      "first_name": "ajfa",
+      "last_name": "afjfa"
+    }
+  },
+  {
+    "id": "7d7940614f9f08534f02",
+    "on_spotify": true,
+    "publish_date": 0,
+    "is_archived": false,
+    "label": {
+      "id": "95b5ad5d63d060c92c16",
+      "title": "ajfa'"
+    },
+    "genre": {
+      "id": "09a08ddd-82eb-43e8-8287-edccee2e3f6a",
+      "name": "ajfa"
+    },
+    "author": {
+      "id": "65fce9eb-bed4-4264-92be-6046bc20a06e",
+      "first_name": "afa",
+      "last_name": "afja"
+    }
+  }
+]

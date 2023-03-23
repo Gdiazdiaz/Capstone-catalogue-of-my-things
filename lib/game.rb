@@ -5,8 +5,8 @@ require 'securerandom'
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
 
-  def initialize(publish_date, multiplayer, last_played_at = Date.today)
-    super(publish_date: publish_date)
+  def initialize(multiplayer, last_played_at, publish_date = Date.today)
+    super(publish_date)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end

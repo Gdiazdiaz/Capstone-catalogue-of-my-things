@@ -15,8 +15,8 @@ module AddBook
     c_state = gets.chomp
     puts "Can we have this book's cover color?"
     c_color = gets.chomp
-    label = Label.new(title: title, color: c_color)
-    book = Book.new(publish_date: p_date, publisher: publisher, cover_state: c_state)
+    label = Label.new(title, c_color)
+    book = Book.new(p_date, publisher, c_state)
     author = Author.new(author_f, author_l)
     book_obj = {
       'id' => book.id, 'title' => label.title, 'publish_date' => book.publish_date,
