@@ -13,25 +13,33 @@ module MusicAlbumModule
   end
 
   def music_album_list
+    puts '=========================================================='
     if @music_albums.empty?
       puts 'No Music Albums'
     else
-      puts 'Music Albums on our list:'
-      @music_albums.map do |album|
-        puts "#{album.on_spotify}, #{album.publish_date}"
+      puts "\t\tMusic Albums on our list:"
+      puts '--------------------------------------------------------'
+      @music_albums.each_with_index do |album, index|
+        puts "#{index + 1}
+          Is on spotify: #{album.on_spotify}
+          Published Date: #{album.publish_date}"
       end
     end
+    puts '=========================================================='
   end
 
   def genre_list
+    puts '=========================================================='
     if @genres.empty?
       puts 'No Genre'
     else
-      puts 'Genre on our list:'
-      @genres.map do |genre|
-        puts genre.name
+      puts "\t\tGenre on our list:"
+      puts '--------------------------------------------------------'
+      @genres.each_with_index do |genre, index|
+        puts "#{index + 1} Name: #{genre.name}"
       end
     end
+    puts '=========================================================='
   end
 
   def add_music_album

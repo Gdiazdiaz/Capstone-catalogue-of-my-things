@@ -38,26 +38,35 @@ module GameModule
   end
 
   def game_list
+    puts '=========================================================='
     if @games.empty?
       puts 'No game, try to add new one'
     else
-      puts 'Games on our list:'
-      @games.map do |game|
-        puts "Publish Date: #{game.publish_date} | Last Played: #{game.last_played_at}"
-        puts "Author Name: #{game.author.first_name} #{game.author.last_name}"
+      puts "\t\tGames on our list:"
+      puts '--------------------------------------------------------'
+      @games.each_with_index do |game, index|
+        puts " #{index + 1}
+          Publish Date: #{game.publish_date}
+          Last Played: #{game.last_played_at}
+          Author Name: #{game.author.first_name} #{game.author.last_name}"
       end
     end
+    puts '=========================================================='
   end
 
   def author_list
+    puts '=========================================================='
     if @authors.empty?
       puts 'No Authors'
     else
-      puts 'Authors on our list:'
-      @authors.map do |author|
-        puts "#{author.first_name}, #{author.last_name}"
+      puts "\t\tAuthors on our list:"
+      puts '--------------------------------------------------------'
+      @authors.each_with_index do |author, index|
+        puts "#{index + 1}
+          Name: #{author.first_name}, #{author.last_name}"
       end
     end
+    puts '=========================================================='
   end
 
   def save_game(games)

@@ -13,25 +13,34 @@ module MovieModule
   end
 
   def movie_list
+    puts '=========================================================='
     if @movies.empty?
       puts 'No Movies, try to add new one'
     else
-      puts 'Movies on our list:'
-      @movies.map do |movie|
-        puts "Publish Date: #{movie.publish_date} | Silent: #{movie.silent}, #{movie.source.name}"
+      puts "\t\tMovies on our list:"
+      puts '--------------------------------------------------------'
+      @movies.each_with_index do |movie, index|
+        puts "#{index + 1}
+          Publish Date: #{movie.publish_date}
+          Silent: #{movie.silent}
+          Source: #{movie.source.name}"
       end
     end
+    puts '=========================================================='
   end
 
   def source_list
+    puts '=========================================================='
     if @sources.empty?
       puts 'No Sources, please add a movie with Source'
     else
-      puts 'Sources List:'
-      @sources.map do |source|
-        puts source.name
+      puts "\t\tSources List:"
+      puts '--------------------------------------------------------'
+      @sources.each_with_index do |source, index|
+        puts "#{index + 1} Name: #{source.name}"
       end
     end
+    puts '=========================================================='
   end
 
   def add_movie
