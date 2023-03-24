@@ -1,10 +1,9 @@
-require 'rspec'
-require_relative '../lib/movies/source'
-require_relative '../lib/movies/movie'
+require_relative '../source'
+require_relative '../movie'
 require_relative '../item'
 
 RSpec.describe Source do
-  subject { described_class.new('Online Shop') }
+  subject { described_class.new(name: 'Online Shop') }
 
   describe '#initialize' do
     it 'creates a new source with a name and an empty items array' do

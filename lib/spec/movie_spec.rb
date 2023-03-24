@@ -1,5 +1,4 @@
-require 'rspec'
-require_relative '../lib/movies/movie'
+require_relative '../movie'
 
 RSpec.describe Movie do
   describe '#initialize' do

@@ -1,6 +1,8 @@
-require_relative '../../item'
+require_relative './item'
+require_relative './source'
+
 class Movie < Item
-  attr_reader :silent
+  attr_accessor :silent
 
   def initialize(publish_date:, silent:)
     super(publish_date: publish_date)

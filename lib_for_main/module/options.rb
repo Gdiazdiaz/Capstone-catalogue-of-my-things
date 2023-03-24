@@ -1,7 +1,6 @@
-class EntryPoint
-  puts 'Welcome to School Library App'
-
-  def menu
+class Option
+  def menu_option
+    puts 'Please choose an option by entering a number:'
     puts '1 - List all books'
     puts '2 - List all music albums'
     puts '3 - List all movies'
@@ -14,6 +13,7 @@ class EntryPoint
     puts '10 - Add a music album'
     puts '11 - Add a movie'
     puts '12 - Add a game'
-    puts '13 - Exit'
+    puts '13 - Save & Exit'
+    puts '14 - Abort'
   end
 end
