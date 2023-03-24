@@ -22,9 +22,6 @@ class App
     @games = load_games
     @genres = []
     @labels = []
-    @movies.each do |mov|
-      puts mov.silent.class
-    end
   end
 
   def genre_list
