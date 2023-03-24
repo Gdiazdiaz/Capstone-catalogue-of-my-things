@@ -1,1 +1,26 @@
-[{"id":"ec4edba28afd9c54216f","archived":false,"cover_state":"very bad","publish_date":"12/12/2023","label":{"id":"ae244d5be85d240dc236","title":"sample","color":"red"}},{"id":"eb28f99102bb2b374a53","archived":false,"cover_state":"3","publish_date":"2","label":{"id":"14acdb79a450db8dab02","title":"21","color":"32"}},{"id":"96e5c9e0bc1b4d2bd5a2","archived":false,"cover_state":"red","publish_date":"12/21/21/","label":{"id":"00c08289a3103969276e","title":"some","color":"blue"}}]
+[
+  {
+    "id": "c80855ecfd9b559c43ba",
+    "archived": false,
+    "publisher": null,
+    "cover_state": "very bad",
+    "publish_date": "12/12/2023",
+    "label": { "id": "cb16832ba2b1940542d1", "title": "sample", "color": "red" }
+  },
+  {
+    "id": "c3838ff762b6ace2a5f7",
+    "archived": false,
+    "publisher": null,
+    "cover_state": "3",
+    "publish_date": "2",
+    "label": { "id": "a725d16d1bb8ec559677", "title": "21", "color": "32" }
+  },
+  {
+    "id": "ff202dfa1a539277f084",
+    "archived": false,
+    "publisher": null,
+    "cover_state": "red",
+    "publish_date": "12/21/21/",
+    "label": { "id": "699d27c7257f98cafb84", "title": "some", "color": "blue" }
+  }
+]
