@@ -42,25 +42,27 @@
   </ul>
 </details>
 
+## Video description 
+- Here is a [video](https://drive.google.com/file/d/1F1rA2xJTPMHC_f-8ZiS5U4LbOMzz2azl/view?usp=share_link) description of our project
 ## Learning objectives
  > - Insert and query data in SQL.
->- Use primary key & foreign key mechanisms for >joining tables.
->- Understand the different types of relationships between tables.
->- Query multiple tables.
->- Prepare complex queries that answer analytical questions.
->- Run a program using the command line.
->- Use Ruby syntax for basic programming operations.
->- Apply Ruby best practices and language style guides in code.
->- Describe the SOLID principles of OOP.
->- Implement classes and objects in Ruby.
->- Understand the four main principles of OOP.
->- Implement encapsulation and inheritance with Ruby.
->- Create a UML class diagram.
->- Explain the difference between associations, aggregations, and composition in OOP.
->- Set up associations between classes and objects.
->- Store data in files.
->- Build interactive console apps.
->- Recognize the value of making equal contributions to group projects to produce the best outcome.
+> - Use primary key & foreign key mechanisms for >joining tables.
+> - Understand the different types of relationships between tables.
+> - Query multiple tables.
+> - Prepare complex queries that answer analytical questions.
+> - Run a program using the command line.
+> - Use Ruby syntax for basic programming operations.
+> - Apply Ruby best practices and language style guides in code.
+> - Describe the SOLID principles of OOP.
+> - Implement classes and objects in Ruby.
+> - Understand the four main principles of OOP.
+> - Implement encapsulation and inheritance with Ruby.
+> - Create a UML class diagram.
+> - Explain the difference between associations, aggregations, and composition in OOP.
+> - Set up associations between classes and objects.
+> - Store data in files.
+> - Build interactive console apps.
+> - Recognize the value of making equal contributions to group projects to produce the best outcome.
 ## Schema Diagram
 
 <img src="./images/catalog_of_my_things.png" width="550" alt="schema digaram">
