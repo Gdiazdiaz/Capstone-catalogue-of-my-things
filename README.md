@@ -220,6 +220,11 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/2belamit)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/belay-bgwa/)
 
+👤 **Ricardo Martínez**
+
+- GitHub: [@rmrmrmr](https://github.com/rmrmrmr)
+- Twitter: [@ricmtza](https://twitter.com/ricmtza)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/ricardo-mag)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
