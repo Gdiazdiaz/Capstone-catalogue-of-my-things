@@ -14,14 +14,17 @@ class App
   include BookModule
   include MusicAlbumModule
   include MovieModule
+
   def initialize
-    @movies = load_movies
+    load_movies
     @music_albums = load_music_albums
     @books = load_books
     @games = load_games
     @genres = []
     @labels = []
-    @sources = []
+    @movies.each do |mov|
+      puts mov.silent.class
+    end
   end
 
   def genre_list
@@ -44,9 +47,9 @@ class App
   end
 
   def save_files
-    save_game(@games)
-    save_book(@books)
-    save_music_albums(@music_albums)
+    # save_game(@games)
+    # save_book(@books)
+    # save_music_albums(@music_albums)
     save_movies(@movies)
   end
 end

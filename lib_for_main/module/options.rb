@@ -13,7 +13,7 @@ class Option
     puts '10 - Add a music album'
     puts '11 - Add a movie'
     puts '12 - Add a game'
-    puts '13 - Exit'
+    puts '13 - Save & Exit'
     puts '14 - Abort'
   end
 end
