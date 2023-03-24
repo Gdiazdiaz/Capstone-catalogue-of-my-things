@@ -73,6 +73,7 @@ module BookModule
       book_json.push({
                        id: book.id,
                        archived: book.archived,
+                       publisher: book.publisher,
                        cover_state: book.cover_state,
                        publish_date: book.publish_date,
                        label: {
