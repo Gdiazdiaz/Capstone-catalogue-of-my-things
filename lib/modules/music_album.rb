@@ -1,11 +1,14 @@
 module MusicAlbumModule
   def load_music_albums
+    @genres = []
+    @music_albums = []
     music_album_data = HandleData.new('music_album')
     music_album_data.read.map do |album|
       new_album = MusicAlbum.new(publish_date: album['publish_date'], on_spotify: album['on_spotify'])
       genre = Genre.new(name: album['genre']['name'])
       genre.add_item(new_album)
-      new_album
+      @genres.push(genre)
+      @music_albums.push(new_album)
     end
   end
 
@@ -16,6 +19,17 @@ module MusicAlbumModule
       puts 'Music Albums on our list:'
       @music_albums.map do |album|
         puts "#{album.on_spotify}, #{album.publish_date}"
+      end
+    end
+  end
+
+  def genre_list
+    if @genres.empty?
+      puts 'No Genre'
+    else
+      puts 'Genre on our list:'
+      @genres.map do |genre|
+        puts genre.name
       end
     end
   end

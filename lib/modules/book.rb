@@ -1,22 +1,36 @@
 module BookModule
   def load_books
     books_data = HandleData.new('book')
+    @books = []
+    @labels = []
     books_data.read.map do |book|
       new_book = Book.new(publish_date: book['publish_date'], publisher: book['publisher'],
                           cover_state: book['cover_state'])
       label = Label.new(title: book['label']['title'], color: book['label']['color'])
       label.add_item(new_book)
-      new_book
+      @labels.push(label)
+      @books.push(new_book)
     end
   end
 
   def book_list
-    if @games.empty?
+    if @books.empty?
       puts 'No Book, try to add new one'
     else
       puts 'Book on our list:'
       @books.map do |book|
         puts "#{book.publish_date}, #{book.publisher}, #{book.cover_state}"
+      end
+    end
+  end
+
+  def label_list
+    if @labels.empty?
+      puts 'No Label'
+    else
+      puts 'Labels on our list:'
+      @labels.map do |label|
+        puts "#{label.title} , #{label.color}"
       end
     end
   end
