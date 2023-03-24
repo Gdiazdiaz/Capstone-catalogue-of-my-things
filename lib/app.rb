@@ -16,6 +16,7 @@ class App
   include MovieModule
 
   def initialize
+    # load_movies sets the @movies and sources variables
     load_movies
     @music_albums = load_music_albums
     @books = load_books
