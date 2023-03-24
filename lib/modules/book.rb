@@ -14,25 +14,38 @@ module BookModule
   end
 
   def book_list
+    puts '=========================================================='
     if @books.empty?
-      puts 'No Book, try to add new one'
+      puts 'No Book, try to add new one\n'
     else
-      puts 'Book on our list:'
-      @books.map do |book|
-        puts "#{book.publish_date}, #{book.publisher}, #{book.cover_state}"
+      puts "\t\tBook on our list:"
+      puts '--------------------------------------------------------'
+      @books.each_with_index do |book, index|
+        # p book
+        puts "#{index + 1})
+          label: #{book.label.title}
+          Published Date: #{book.publish_date}
+          Publisher: #{book.publisher}
+          Cover State: #{book.cover_state}"
       end
     end
+    puts '=========================================================='
   end
 
   def label_list
+    puts '=========================================================='
     if @labels.empty?
-      puts 'No Label'
+      puts 'No Label \n'
     else
-      puts 'Labels on our list:'
-      @labels.map do |label|
-        puts "#{label.title} , #{label.color}"
+      puts "\t\tLabels on our list:"
+      puts '--------------------------------------------------------'
+      @labels.each_with_index do |label, index|
+        puts "#{index + 1}
+          Title: #{label.title}
+          Color: #{label.color}"
       end
     end
+    puts '=========================================================='
   end
 
   def add_book
