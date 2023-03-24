@@ -23,6 +23,17 @@ module MovieModule
     end
   end
 
+  def source_list
+    if @sources.empty?
+      puts 'No Sources, please add a movie with Source'
+    else
+      puts 'Sources List:'
+      @sources.map do |source|
+        puts source.name
+      end
+    end
+  end
+
   def add_movie
     puts "Let's create a a movie"
     puts 'When was the movie published? (YYYY-MM-DD)'
@@ -39,6 +50,7 @@ module MovieModule
     @movies.push(new_movie)
     @sources.push(source)
     puts 'Movie added successfully'
+    puts @movies
   end
 
   def save_movies(movies)
