@@ -29,11 +29,11 @@ module MovieModule
     p_date = gets.chomp
     puts 'Is Silent? Yes | No'
     silent = gets.chomp
-    if silent == 'yes' && 'Yes'
-      sil = true
-    else
-      sil = false
-    end
+    sil = if silent == 'yes' && 'Yes'
+            true
+          else
+            false
+          end
     puts 'What is the source:'
     source_name = gets.chomp
 
