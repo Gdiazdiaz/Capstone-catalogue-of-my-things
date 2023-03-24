@@ -50,7 +50,6 @@ module MovieModule
     @movies.push(new_movie)
     @sources.push(source)
     puts 'Movie added successfully'
-    puts @movies
   end
 
   def save_movies(movies)
