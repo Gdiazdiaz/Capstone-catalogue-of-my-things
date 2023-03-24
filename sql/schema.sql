@@ -15,16 +15,16 @@ CREATE TABLE music_albums (
 
 -- books table
 CREATE TABLE books(
-   publisher text,
-   cover_state text
+  publisher text,
+  cover_state text
 );
 
 -- labels table
 CREATE TABLE labels(
-   id SERIAL PRIMARY KEY,
-   title text,
-   color text,
-   item_id int REFERENCES item (id)
+  id SERIAL PRIMARY KEY,
+  title text,
+  color text,
+  item_id int REFERENCES item (id)
 );
 
 -- movies table
