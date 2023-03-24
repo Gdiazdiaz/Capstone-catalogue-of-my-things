@@ -26,3 +26,17 @@ CREATE TABLE labels(
    color text,
    item_id int REFERENCES item (id)
 );
+
+-- movies table
+CREATE TABLE movies(
+  id BIGSERIAL PRIMARY KEY,
+  publish_year DATE,
+  silent BOOLEAN,
+  CONSTRAINT fk_sources FOREIGN KEY(source_id) REFERENCES sources(id)
+);
+
+--sources table
+CREATE TABLE sources (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(100)
+);
